@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<package>
+  <metadata>
+    <id>{id}</id>
+    <version>{version}</version>
+    <authors>aiinfra-framework@microsoft.com</authors>
+    <owners>aiinfra-framework@microsoft.com</owners>
+    <licenseUrl>https://github.com/tensorflow/tensorflow/blob/master/LICENSE</licenseUrl>
+    <projectUrl>https://aiinfra.visualstudio.com/tensorflow/_git/tensorflow</projectUrl>
+    <iconUrl>https://www.tensorflow.org/_static/d0e571fd14/images/tensorflow/favicon.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <releaseNotes>{release_notes}
+    </releaseNotes>
+    <description>TensorFlowis an open source software library for high performance numerical computation.</description>
+    <copyright>Copyright ©2017 Microsoft Corporation</copyright>
+    <tags>deeplearning tensorflow</tags>
+  </metadata>
+  <files>
+    {files}
+  </files>
+</package>

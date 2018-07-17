@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemDefinitionGroup Label="DefaultIncludes">
+    <ClCompile>
+      <AdditionalIncludeDirectories>{additional_include_directories};%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>NOGDI;NOMINMAX;_USE_MATH_DEFINES;COMPILER_MSVC;IGEN_AVOID_STL_ARRAY;TENSORFLOW_USE_EIGEN_THREADPOOL;EIGEN_HAS_C99_MATH;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <DisableSpecificWarnings>4018;4067;4099;4146;4244;4267;4305;4307;4309;4324;4334;4348;4503;4554;4715;4722;4723;4800;4838;4996;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+    </ClCompile>
+    <Link Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      <AdditionalDependencies>{additional_dependencies_debug};%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalOptions>/IGNORE:4099 /IGNORE:4217 /IGNORE:4049 %(AdditionalOptions)</AdditionalOptions>
+    </Link>
+    <Link Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      <AdditionalDependencies>{additional_dependencies_release};%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalOptions>/IGNORE:4099 /IGNORE:4217 /IGNORE:4049 %(AdditionalOptions)</AdditionalOptions>
+    </Link>
+    <Link Condition="'$(BuildType)|$(BuildArchitecture)'=='debug|amd64'">
+      <AdditionalDependencies>{additional_dependencies_debug};%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalOptions>/IGNORE:4099 /IGNORE:4217 /IGNORE:4049 %(AdditionalOptions)</AdditionalOptions>
+    </Link>
+    <Link Condition="'$(BuildType)|$(BuildArchitecture)'=='retail|amd64'">
+      <AdditionalDependencies>{additional_dependencies_release};%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalOptions>/IGNORE:4099 /IGNORE:4217 /IGNORE:4049 %(AdditionalOptions)</AdditionalOptions>
+    </Link>
+  </ItemDefinitionGroup>
+  <Target Name="AfterBuild">
+    <Copy Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" SourceFiles="{after_build_copy_files_debug}" DestinationFolder="$(TargetDir)"/>
+    <Copy Condition="'$(Configuration)|$(Platform)'=='Release|x64'" SourceFiles="{after_build_copy_files_release}" DestinationFolder="$(TargetDir)"/>
+    <Copy Condition="'$(BuildType)|$(BuildArchitecture)'=='debug|amd64'" SourceFiles="{after_build_copy_files_debug}" DestinationFolder="$(TargetDir)"/>
+    <Copy Condition="'$(BuildType)|$(BuildArchitecture)'=='retail|amd64'" SourceFiles="{after_build_copy_files_release}" DestinationFolder="$(TargetDir)"/>
+  </Target>  
+</Project>
