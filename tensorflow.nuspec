@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<package>
+  <metadata>
+    <id>tensorflow</id>
+    <version>1.8.0.29420</version>
+    <authors>aiinfra-framework@microsoft.com</authors>
+    <owners>aiinfra-framework@microsoft.com</owners>
+    <licenseUrl>https://github.com/tensorflow/tensorflow/blob/master/LICENSE</licenseUrl>
+    <projectUrl>https://aiinfra.visualstudio.com/tensorflow/_git/tensorflow</projectUrl>
+    <iconUrl>https://www.tensorflow.org/_static/d0e571fd14/images/tensorflow/favicon.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <releaseNotes>
+    Branch: user/zhijxu/costom/office_osi/r1.8_tmp
+    Commit: 18cc83c865a19623bf0fe2c65ddb2bea343cbc02
+    Build: https://aiinfra.visualstudio.com/tensorflow/_build/index?buildId=29420
+    </releaseNotes>
+    <description>TensorFlowis an open source software library for high performance numerical computation.</description>
+    <copyright>Copyright ©2017 Microsoft Corporation</copyright>
+    <tags>deeplearning tensorflow</tags>
+  </metadata>
+  <files>
+    <file src="C:\Users\zhijxu\agent\_work\9\s\license\**\*" target="third_party_license"/>
+  </files>
+</package>
+
