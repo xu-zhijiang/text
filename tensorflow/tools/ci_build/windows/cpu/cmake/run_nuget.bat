@@ -78,3 +78,4 @@ IF DEFINED NUMBER_OF_PROCESSORS (ECHO NUMBER_OF_PROCESSORS is set to %NUMBER_OF_
 
 :: Create nuget package
 %PY_EXE% %REPO_ROOT%\tensorflow\tools\ci_build\windows\nuget\collect_components_license.py
+%PY_EXE% %REPO_ROOT%\tensorflow\tools\ci_build\windows\nuget\build_nuspec.py
