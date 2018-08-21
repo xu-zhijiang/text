@@ -19,4 +19,7 @@ set expandtab
 retab
 
 
+bind -x '"\C-l": echo -e "\n\n\n\n\n\n\n\n"; clear; ls' 》》》绑定快捷键到命令
+
+
 
