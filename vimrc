@@ -19,7 +19,7 @@ set expandtab
 retab
 
 
-bind -x '"\C-l": echo -e "\n\n\n\n\n\n\n\n"; clear; ls' 》》》绑定快捷键到命令
+bind -x '"\C-l": echo -e "\n\n\n\n\n\n\n\n"; clear; ls' 》》》绑定快捷键到命令；这样按了ctrl+l后清屏而且可以和以往的输出分割开
 
 
 
