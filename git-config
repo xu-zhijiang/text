@@ -1,0 +1,12 @@
+
+创建文件~/.gitconfig这样就不用以后就不用再输入密码了
+
+[user]
+    email = Zhijiang.Xu@microsoft.com
+    name = Zhijiang.Xu@microsoft.com
+[core]
+    editor = vi
+[credential]
+    helper = store
+[push]
+    default = simple
